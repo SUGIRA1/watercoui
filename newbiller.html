@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Watercoapp</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="form-box auth-box">
+        <h2 class="form-header text-center">WaterCo Sign up</h2>
+        <form onsubmit="event.preventDefault(); onUserDetailsSubmitTwo();">
+            <div class="row mb-3">
+            <label for="Email" class="col-form-label">Email</label>
+            <div>
+                <input type="email" class="form-control" name="Email" id="Email" required>
+            </div>
+            </div>
+            <div class="row mb-3">
+                <label for="UserName" class="col-form-label">Username</label>
+                <div>
+                    <input type="text" class="form-control" name="UserName" id="UserName" required>
+                </div>
+                </div>
+            <div class="row mb-3">
+            <label for="Password" class="col-form-label">Password</label>
+            <div>
+                <input type="password" name="Password" class="form-control" id="Password" required>
+            </div>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary mx-auto out-btn">Sign up</button>
+            <p class="register">Have an account <a href="./index.html" class="register">Login now</a></p>
+        </form>
+    </div>
+    <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Watercoapp</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">WaterCo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./client.html">Clients</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./premises.html">Premises</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./routes.html">Routes</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="./bill.html" aria-current="page">Billing</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./payment.html">Payments</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./billers.html">All Billers</a>
+              </li>
+              <li class="nav-item nav-logout">
+                <a class="nav-link" href="./index.html" >Logout</a>
+            </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+            <div class="row">
+                <div class="form-box">
+                    <h2 class="form-header text-center">Capture Bill</h2>
+                    <form onsubmit="event.preventDefault(); onBillFormSubmit();">
+                        <div class="row mb-3">
+                        <label for="PremiseId" class="col-form-label">Premise ID</label>
+                        <div>
+                            <input type="number" class="form-control" name="PremiseId" id="PremiseId" required>
+                        </div>
+                        </div>
+                        <div class="row mb-3">
+                        <label for="UserID" class="col-form-label">User ID</label>
+                        <div>
+                            <input type="number" class="form-control" name="UserID" id="UserID" required>
+                        </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="Reading" class="col-form-label">Reading</label>
+                            <div>
+                            <input type="number" class="form-control" name="Reading" id="Reading" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-primary mx-auto out-btn" name="signup_submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="elem">
+                    <h2 class="elem-title">All Bills</h2>
+                    <div class="row g-4 add-form">
+                        <div class="col-md-4">
+                          <input type="number" class="form-control" placeholder="Bill ID" aria-label="Bill ID" name="Billid" id="Billid"> 
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-outline-primary" onclick="event.preventDefault(); onBillIdInput();">View one</button>
+                        </div>
+                      </div>
+                    <table class="table" id="allbi">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="align-middle">Bill ID</th>
+                          <th scope="col" class="align-middle">Premise ID</th>
+                          <th scope="col" class="align-middle">Biller ID</th>
+                          <th scope="col" class="align-middle">Reading(Units)</th>
+                          <th scope="col" class="align-middle">Amount(RWF)</th>
+                          <th scope="col" class="align-middle">Full Paid</th>
+                          <th scope="col" class="align-middle">Creation Date</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tbody">  
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+      </div>
+
+<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>
