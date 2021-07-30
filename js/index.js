@@ -4,7 +4,7 @@
 
 var selectedRecord = null;
 var selectedRecordID = null;
-var baseUrl = "https://watercoapi-sugira.herokuapp.com/";
+var baseUrl = "https://watercoapi-sugira.herokuapp.com";
 
 // Get cookie
 function getCookie(name) {
